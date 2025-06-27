@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Diamante Azul</title>
+  <link rel="stylesheet" href="Estilos/Style_Dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">Diamante<span class="gold">azul</span></div>
+      <button id="toggleSidebar" class="toggle-btn">✖</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active">📊 Dashboard</a>
+      <a href="#cuotas">💰 Cuotas</a>
+      <a href="#clientes">👥 Clientes</a>
+      <a href="#productos">📦 Productos</a>
+      <a href="formularios.html">📝 Formularios</a>
+      <a href="login.html">🔓 Cerrar sesión</a>
+    </nav>
+  </aside>
+
+  <button id="openSidebar" class="open-btn">☰</button>
+
+  <div class="layout">
+    <main class="main-content">
+
+      <section class="dashboard-metrics">
+        <div class="metric-card">
+          <h4>Clientes</h4>
+          <p>3</p>
+        </div>
+        <div class="metric-card">
+          <h4>Productos Empeñados</h4>
+          <p>3</p>
+        </div>
+        <div class="metric-card">
+          <h4>Cuotas Pendientes</h4>
+          <p>1</p>
+        </div>
+      </section>
+
+      <section class="card" id="cuotas">
+        <h3>Cuotas de los Clientes</h3>
+        <input type="text" id="filtroCuotas" placeholder="Buscar cliente o producto..." class="search-input" />
+        <button onclick="exportarCSV('cuotas')">Exportar CSV</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Producto</th>
+              <th>Valor Tasado</th>
+              <th>Fecha Esperada</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>Reloj de Oro</td>
+              <td>$1,200</td>
+              <td>2025-07-05</td>
+              <td class="estado pendiente">Pendiente</td>
+            </tr>
+            <tr>
+              <td>María López</td>
+              <td>Laptop HP</td>
+              <td>$900</td>
+              <td>2025-07-10</td>
+              <td class="estado pagada">Pagada</td>
+            </tr>
+            <tr>
+              <td>Carlos Ruiz</td>
+              <td>Bicicleta MTB</td>
+              <td>$650</td>
+              <td>2025-06-25</td>
+              <td class="estado vencida">Vencida</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" id="clientes">
+        <h3>Clientes Registrados</h3>
+        <input type="text" id="filtroClientes" placeholder="Buscar por nombre, documento, correo..." class="search-input" />
+        <button onclick="exportarCSV('clientes')">Exportar CSV</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Documento</th>
+              <th>Correo</th>
+              <th>Dirección</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>CC 123456789</td>
+              <td>juanperez@email.com</td>
+              <td>Calle 123</td>
+            </tr>
+            <tr>
+              <td>María López</td>
+              <td>CC 987654321</td>
+              <td>marialopez@email.com</td>
+              <td>Carrera 10</td>
+            </tr>
+            <tr>
+              <td>Carlos Ruiz</td>
+              <td>CC 1122334455</td>
+              <td>carlos@email.com</td>
+              <td>Avenida Siempre Viva</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" id="productos">
+        <h3>Productos Empeñados</h3>
+        <input type="text" id="filtroProductos" placeholder="Buscar producto, cliente o estado..." class="search-input" />
+        <button onclick="exportarCSV('productos')">Exportar CSV</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cliente</th>
+              <th>Fecha de Empeño</th>
+              <th>Valor Tasado</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reloj de Oro</td>
+              <td>Juan Pérez</td>
+              <td>2025-06-10</td>
+              <td>$1,200</td>
+              <td>Activo</td>
+            </tr>
+            <tr>
+              <td>Laptop HP</td>
+              <td>María López</td>
+              <td>2025-06-15</td>
+              <td>$900</td>
+              <td>Activo</td>
+            </tr>
+            <tr>
+              <td>Televisor LG</td>
+              <td>Pedro Ramírez</td>
+              <td>2025-06-12</td>
+              <td>$1,000</td>
+              <td>Activo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <footer>
+      &copy; 2024 Diamante Azul. Todos los derechos reservados.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
