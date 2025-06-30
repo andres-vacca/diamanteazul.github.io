@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario Cliente - Diamante Azul</title>
+    <link rel="stylesheet" href="../Estilos/styles.css" />
+</head>
+<body class="form-page">
+    <header>
+        <div class="container header-container">
+            <div class="logo">Diamante<span class="gold">azul</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../formularios.html">Formularios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Formulario Cliente</h1>
+        <form>
+            <label for="num_doc">Número de documento:</label><br />
+            <input type="text" id="num_doc" name="num_doc" required /><br />
+
+            <label for="nom_cliente">Nombre completo:</label><br />
+            <input type="text" id="nom_cliente" name="nom_cliente" required /><br />
+
+            <label for="tip_doc">Tipo de documento:</label><br />
+            <input type="text" id="tip_doc" name="tip_doc" required /><br />
+
+            <label for="email">Correo electrónico:</label><br />
+            <input type="email" id="email" name="email" /><br />
+
+            <label for="dir_residencia">Dirección de residencia:</label><br />
+            <input type="text" id="dir_residencia" name="dir_residencia" /><br />
+
+            <label for="lugar_exp_documento">Lugar de expedición del documento:</label><br />
+            <input type="text" id="lugar_exp_documento" name="lugar_exp_documento" /><br />
+
+            <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+        </form>
+    </main>
+</body>
+</html>
