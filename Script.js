@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Buscadores dinámicos para cada tabla
   const buscadores = [
     { input: 'filtroCuotas', tabla: '#cuotas tbody tr' },
     { input: 'filtroClientes', tabla: '#clientes tbody tr' },
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Función para exportar cualquier tabla como CSV
 function exportarCSV(seccionID) {
   const filas = document.querySelectorAll(`#${seccionID} table tr`);
   const csv = [...filas].map(row =>
