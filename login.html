@@ -42,6 +42,17 @@
             </div>
         </form>
     </div>
+    <script>
+        const form = document.querySelector('.login-card');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'admin' && password === '123a') {
+                window.location.href = 'Dashboard.html';
+            }
+        });
+    </script>
 </body>
 <footer id="contact">
     <div class="container footer-container">
