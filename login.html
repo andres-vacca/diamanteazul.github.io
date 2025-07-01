@@ -43,21 +43,24 @@
         </form>
     </div>
         <script>
-        const form = document.querySelector('.login-card');
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            if (username === 'admin' && password === '123a') {
-                window.location.href = 'Dashboard.html';
-            }  if (username === 'cliente' && password === '1234a') {
-                window.location.href = 'index.html';
-            }  if (username === 'empleado' && password === '1235a') {
-                window.location.href = 'Dashboard.html';
-            }else{
-                window.location.href = '500.html'
-            }
-        });
+    const form = document.querySelector('.login-card');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'admin' && password === '123a') {
+        window.location.href = 'Dashboard.html';
+    } else if (username === 'cliente' && password === '1234a') {
+        window.location.href = 'index.html';
+    } else if (username === 'empleado' && password === '1235a') {
+        window.location.href = 'Dashboard.html';
+    } else {
+        // En lugar de redirigir, es mejor mostrar un mensaje de error
+        alert('Usuario o contraseña incorrectos');
+        // window.location.href = '500.html'; // Evitar redirigir por un error de login
+    }
+});
     </script>
 </body>
 <footer id="contact">
