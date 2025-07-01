@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+< lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,6 +42,23 @@
             </div>
         </form>
     </div>
+        <script>
+        const form = document.querySelector('.login-card');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'admin' && password === '123a') {
+                window.location.href = 'Dashboard.html';
+            }  if (username === 'cliente' && password === '1234a') {
+                window.location.href = 'index.html';
+            }  if (username === 'empleado' && password === '1235a') {
+                window.location.href = 'Dashboard.html';
+            }else{
+                window.location.href = '500.html'
+            }
+        });
+    </script>
 </body>
 <footer id="contact">
     <div class="container footer-container">
@@ -58,5 +75,5 @@
         <p class="copyright">&copy; 2024 Diamante Azul. Todos los derechos reservados</p>
     </div>
 </footer>
-<script src="login.js"></script>
+
 </html>
