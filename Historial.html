@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historial de Productos</title>
+    <link rel="stylesheet" href="Estilos/styles.css" />
+    <style>
+        .table-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--royal-blue);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(44, 62, 80, 0.1);
+        }
+        th, td {
+            border: 1px solid var(--royal-blue);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            font-weight: 700;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: var(--gold);
+            color: var(--black);
+            cursor: default;
+        }
+        h2 {
+            color: var(--royal-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                Diamante<span class="gold">Azul</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index_logged.html">Home</a></li>
+                    <li><a href="Electrodomesticos.html">Productos</a></li>
+                    <li><a href="Historial.html">Historial</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="table-container">
+        <h2>Productos Empeñados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio Empeño</th>
+                    <th>Fecha Empeño</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Reloj de Pulsera</td>
+                    <td>Reloj clásico de acero inoxidable</td>
+                    <td>$500.000</td>
+                    <td>2024-04-01</td>
+                </tr>
+                <tr>
+                    <td>Cadena de Oro</td>
+                    <td>Cadena de oro 14k</td>
+                    <td>$1,200.000</td>
+                    <td>2024-04-10</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Productos Comprados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio Empeño</th>
+                    <th>Fecha Empeño</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Televisor</td>
+                    <td>televisor Samsung QLED 4k de 44" </td>
+                    <td>$6,000.000</td>
+                    <td>2025-04-01</td>
+                </tr>
+                <tr>
+                    <td>Anillo de esmeralda</td>
+                    <td>anillo de 15k trenzado</td>
+                    <td>$3,000.000</td>
+                    <td>2025-02-14</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-info">
+                <h3>Diamante Azul</h3>
+                <p>© 2024 Todos los derechos reservados.</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon facebook" aria-label="Facebook"></a>
