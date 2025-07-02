@@ -418,3 +418,13 @@ form button.btn:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+.tv-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
